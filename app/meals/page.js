@@ -1,6 +1,11 @@
 import Meals from "../components/Meals";
 import styles from "./styles.module.css";
 
+export const metadata = {
+  title: "Next meal app",
+  description: "Meal ordering by Arif",
+};
+
 const mealPage = () => {
   return (
     <div className="p-8">

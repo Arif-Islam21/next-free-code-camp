@@ -10,6 +10,10 @@ function Navbar() {
       name: "Meals",
       path: "/meals",
     },
+    {
+      name: "About",
+      path: "/about",
+    },
   ];
 
   const links = (
