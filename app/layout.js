@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -13,6 +13,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const poppins = Poppins({ weight: ["100", "500", "800"], subsets: ["latin"] });
+
 export const metadata = {
   title: {
     default: "Next Hero",
@@ -25,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${poppins.className} ${geistMono.variable} antialiased`}
       >
         <Navbar />
         <div className="min-h-[calc(100vh-70px)]">{children}</div>
