@@ -1,5 +1,7 @@
 const getTime = async () => {
-  const res = await fetch(`http://localhost:3000/time`, { cache: "no-store" });
+  const res = await fetch(`http://localhost:3000/time`, {
+    next: { revalidate: 0.5 },
+  });
   const data = await res.json();
   return data.currentTime;
 };
