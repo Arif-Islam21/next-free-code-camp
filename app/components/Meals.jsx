@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const Meals = () => {
@@ -39,6 +40,12 @@ const Meals = () => {
         {meals.length &&
           meals?.map((meal, idx) => (
             <div key={meal.idMeal} className="border-2 p-4">
+              <Image
+                src={meal.strMealThumb}
+                alt="hello next image"
+                width={40}
+                height={40}
+              />
               <h4 className="text-xl font-bold">{meal.strMeal}</h4>
             </div>
           ))}
