@@ -1,18 +1,29 @@
 import Link from "next/link";
 
 function Navbar() {
+  const lilnksData = [
+    {
+      name: "Posts",
+      path: "/posts",
+    },
+    {
+      name: "Meals",
+      path: "/meals",
+    },
+  ];
+
   const links = (
     <>
-      <li className="bg-gray-200 border-2 mr-2 border-orange-500 rounded-xl ">
-        <Link className="font-bold" href="/posts">
-          Posts
-        </Link>
-      </li>
-      <li className="bg-gray-200 border-2 mr-2 border-orange-500 rounded-xl ">
-        <Link className="font-bold" href="/psts">
-          Posts
-        </Link>
-      </li>
+      {lilnksData.map((item, idx) => (
+        <li
+          key={idx}
+          className="bg-gray-200 border-2 mr-2 border-orange-500 rounded-xl "
+        >
+          <Link className="font-bold" href={item.path}>
+            {item.name}
+          </Link>
+        </li>
+      ))}
     </>
   );
 

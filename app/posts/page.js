@@ -13,7 +13,7 @@ const postPage = async () => {
             key={post.id}
           >
             <h6 className="text-xl font-semibold">{post.title}</h6>
-            <p className="text-sm">{post.body}</p>
+            {/* <p className="text-sm">{post.body}</p> */}
             <button className="btn btn-accent">
               <Link href={`/posts/${post.id}`}>Read Post</Link>
             </button>
