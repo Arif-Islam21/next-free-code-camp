@@ -1,5 +1,10 @@
+import HomePage from "@/components/homePage/HomePage";
 import Image from "next/image";
 
 export default function Home() {
-  return <div className="bg-primary">Hello car doctor pro</div>;
+  return (
+    <div className="">
+      <HomePage />
+    </div>
+  );
 }
