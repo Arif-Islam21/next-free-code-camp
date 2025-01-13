@@ -1,7 +1,10 @@
+import SectionTitle from "../shared/SectionTitle";
+
 const About = () => {
   return (
     <div className="bg-slate-200">
       <div className="container mx-auto">
+        <SectionTitle />
         <div className="grid grid-cols-1 h-screen lg:grid-cols-2">
           <div>Image</div>
           <div>Content</div>
