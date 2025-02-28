@@ -4,10 +4,18 @@ type Props = {
   params: Promise<{ productId: string }>;
 };
 
+const getRandomNumber = (count: number): number => {
+  return Math.floor(Math.random() * count);
+};
+
 export const generateMetadata = async ({
   params,
 }: Props): Promise<Metadata> => {
   const id = (await params).productId;
+  const random = getRandomNumber(2);
+  if (random === 1) {
+    throw new Error(`Invalid random number`);
+  }
   const title = await new Promise((resolve) => {
     setTimeout(() => {
       resolve(`IPhone ${id}`);
