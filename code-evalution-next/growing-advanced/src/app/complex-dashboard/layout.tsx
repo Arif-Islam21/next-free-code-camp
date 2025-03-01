@@ -3,13 +3,16 @@ export default function RootLayout({
   users,
   revinue,
   notifications,
+  login,
 }: {
   children: React.ReactNode;
   users: React.ReactNode;
   revinue: React.ReactNode;
   notifications: React.ReactNode;
+  login: React.ReactNode;
 }) {
-  return (
+  const isLoggedIn = true;
+  return isLoggedIn ? (
     <>
       <div>{children}</div>
       <div className="flex">
@@ -20,5 +23,7 @@ export default function RootLayout({
         <div className="flex flex-auto">{notifications}</div>
       </div>
     </>
+  ) : (
+    login
   );
 }
