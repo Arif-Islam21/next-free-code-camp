@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 
 type Users = {
@@ -44,10 +45,9 @@ const UsersClient = () => {
         >
           <div className="font-bold">{usr.name}</div>
           <div className="text-sm">
-            <span>Username: {usr.username}</span>
-            <span>Email: {usr.email}</span>
-            <span>Phone: {usr.phone}</span>
-            <span>ID: {usr.id}</span>
+            <div>Username: {usr.username}</div>
+            <div>Email: {usr.email}</div>
+            <div>Phone: {usr.phone}</div>
           </div>
         </li>
       ))}
